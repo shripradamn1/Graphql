@@ -1,0 +1,19 @@
+type Book {
+    id: ID!
+    title: String
+    pages: Int
+
+}
+
+# Type definition
+
+# Queries to retrive all books, and a book by id
+type Query {
+    allBooks: [Book]
+    bookById(id: ID!): Book
+}
+
+# Query to update a book by id
+type Mutation {
+    updateBook(id: ID!, title: String): Book
+}
